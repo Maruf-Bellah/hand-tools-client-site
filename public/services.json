@@ -1,0 +1,58 @@
+[
+     {
+          "name": "Drill Machine",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/10_70972cca-f616-46d4-8a68-cf2c018545f3_1024x1024.jpg",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 29,
+          "minimum": 100,
+          "available": 560
+     },
+     {
+          "name": "Rod cutting machine",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/20_1dc145df-30d2-4947-92c8-d51cc60621b4_1024x1024.jpg",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 59,
+          "minimum": 100,
+          "available": 300
+     },
+     {
+          "name": "Clean Floor",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/19_1024x1024.jpg",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 45,
+          "minimum": 100,
+          "available": 230
+     },
+     {
+          "name": "Drill wall",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/8_9027be7a-61a3-4430-a980-4bddda2de56b_1024x1024.jpg",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 29,
+          "minimum": 100,
+          "available": 320
+     },
+     {
+          "name": "Test machine",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/6_a3634a45-66e7-4a67-854b-98b447a5fe63_1024x1024.jpg",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 79,
+          "minimum": 100,
+          "available": 230
+     },
+     {
+          "name": "Range",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/22_1024x1024.png",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 39,
+          "minimum": 100,
+          "available": 300
+     },
+     {
+          "name": "Drill machine",
+          "img": "https://cdn.shopify.com/s/files/1/0377/2373/4148/products/11_1024x1024.jpg",
+          "description": "With this device you can shoot your work, all the work is useful for your walls. . Again, it means that you can do two things at once, so order now without delay",
+          "price": 39,
+          "minimum": 100,
+          "available": 200
+     }
+]

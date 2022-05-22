@@ -2,37 +2,45 @@ import React from 'react';
 
 const Footer = () => {
      return (
-          <div>
-               <footer class="footer p-10 bg-base-200 text-base-content">
+          <div className=''>
+               <footer className="footer p-10 bg-base-200 text-base-content ">
                     <div>
-                         <span class="footer-title">Services</span>
-                         <a class="link link-hover">Branding</a>
-                         <a class="link link-hover">Design</a>
-                         <a class="link link-hover">Marketing</a>
-                         <a class="link link-hover">Advertisement</a>
+                         <span className="footer-title">Services</span>
+                         <a className="link link-hover">Branding</a>
+                         <a className="link link-hover">Design</a>
+                         <a className="link link-hover">Marketing</a>
+                         <a className="link link-hover">Advertisement</a>
                     </div>
                     <div>
-                         <span class="footer-title">Company</span>
-                         <a class="link link-hover">About us</a>
-                         <a class="link link-hover">Contact</a>
-                         <a class="link link-hover">Jobs</a>
-                         <a class="link link-hover">Press kit</a>
+                         <span className="footer-title">Company</span>
+                         <a className="link link-hover">About us</a>
+                         <a className="link link-hover">Contact</a>
+                         <a className="link link-hover">Jobs</a>
+                         <a className="link link-hover">Press kit</a>
                     </div>
                     <div>
-                         <span class="footer-title">Legal</span>
-                         <a class="link link-hover">Terms of use</a>
-                         <a class="link link-hover">Privacy policy</a>
-                         <a class="link link-hover">Cookie policy</a>
+                         <span className="footer-title">Legal</span>
+                         <a className="link link-hover">Terms of use</a>
+                         <a className="link link-hover">Privacy policy</a>
+                         <a className="link link-hover">Cookie policy</a>
                     </div>
                     <div>
-                         <span class="footer-title">Newsletter</span>
-                         <div class="form-control w-80">
-                              <label class="label">
-                                   <span class="label-text">Enter your email address</span>
+                         <span className="footer-title">Newsletter</span>
+                         <div className="form-control w-80">
+                              <label className="label">
+                                   <span className="label-text">Enter your email address</span>
                               </label>
-                              <div class="relative">
-                                   <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" />
-                                   <button class="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                              <div className="relative">
+
+
+                                   <div class="form-control">
+                                        <div class="input-group">
+                                             <input type="text" placeholder="Search…" class="input input-bordered" />
+                                             <button class="btn btn-square">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                             </button>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                     </div>
