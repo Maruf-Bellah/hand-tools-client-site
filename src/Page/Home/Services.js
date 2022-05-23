@@ -14,10 +14,10 @@ const Services = ({ card }) => {
                          <p>{description.slice(0, 74)}</p>
                          <h2 className="card-title">Price: ${price}</h2>
                          <div className='flex justify-end items-center'>
-                              {/*        <div class="btn-group card-actions">
-                                   <button class="btn">«</button>
-                                   <button class="btn">Page 22</button>
-                                   <button class="btn">»</button>
+                              {/*        <div className="btn-group card-actions">
+                                   <button className="btn">«</button>
+                                   <button className="btn">Page 22</button>
+                                   <button className="btn">»</button>
                               </div> */}
                               <div className="card-actions justify-end">
                                    <Link to='/purchage'>

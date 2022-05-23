@@ -1,61 +1,80 @@
 import React from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useForm } from "react-hook-form";
 import Loading from '../Sheared/Loading';
 
-
-
-
-
-const Login = () => {
-
+const SignUp = () => {
+     const navigate = useNavigate()
      const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
      const { register, formState: { errors }, handleSubmit } = useForm();
 
+
      const [
-          signInWithEmailAndPassword,
+          createUserWithEmailAndPassword,
           user,
           loading,
           error,
-     ] = useSignInWithEmailAndPassword(auth);
+     ] = useCreateUserWithEmailAndPassword(auth);
 
-
-
-
+     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
      let signInError;
-     const navigate = useNavigate()
-     let location = useLocation();
-     let from = location.state?.from?.pathname || "/";
 
-     if (user || gUser) {
 
-          navigate(from, { replace: true });
 
-     }
-
-     if (loading || gLoading) {
+     if (loading || gLoading || updating) {
           return <Loading></Loading>
      }
-
-     if (error || gError) {
+     if (error || gError || updateError) {
           signInError = <p className='text-red-500 text-sm'>{error?.message || gError?.message}</p>
      }
 
-     const onSubmit = data => {
+     const onSubmit = async data => {
           console.log(data)
-          signInWithEmailAndPassword(data.email, data.password)
+          await createUserWithEmailAndPassword(data.email, data.password)
+          await updateProfile({ displayName: data.name });
+          navigate('/purchage')
+
 
      };
-
+     if (user || gUser) {
+          navigate('/')
+          // console.log(user || gUser);
+     }
      return (
           <div className='flex h-screen justify-center items-center'>
                <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
-                         <h2 className="text-center text-2xl font-bold">Login</h2>
+                         <h2 className="text-center text-2xl font-bold">Sign Up</h2>
                          <form onSubmit={handleSubmit(onSubmit)}>
+
+                              <div className="form-control w-full max-w-xs">
+                                   <label className="label">
+                                        <span className="label-text">Name</span>
+                                   </label>
+                                   <input
+                                        type="text"
+                                        placeholder="Your Name"
+                                        className="input input-bordered w-full max-w-xs"
+                                        {...register("name", {
+                                             required: {
+                                                  value: true,
+                                                  message: 'Name is Required'
+                                             },
+                                             minLength: {
+                                                  value: 5,
+                                                  message: 'Must be 3 characters or longer'
+                                             }
+
+                                        })}
+                                   />
+                                   <label className="label">
+                                        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                        {errors.name?.type === ' minLength' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                   </label>
+                              </div>
 
                               <div className="form-control w-full max-w-xs">
                                    <label className="label">
@@ -109,7 +128,7 @@ const Login = () => {
                               {signInError}
                               <input className='btn btn-primary w-full max-w-xs text-white' type="submit" value="Login" />
                          </form>
-                         <p><small>Tools Menu <Link className='text-secondary' to="/signup">Create New Account</Link></small></p>
+                         <p><small>Already have an account ?<Link className='text-secondary' to="/login"> Please Login</Link></small></p>
                          <div className="divider">OR</div>
                          <button
                               onClick={() => signInWithGoogle()}
@@ -121,4 +140,4 @@ const Login = () => {
      );
 };
 
-export default Login;
+export default SignUp;
