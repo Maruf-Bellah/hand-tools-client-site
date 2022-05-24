@@ -25,6 +25,10 @@ const SignUp = () => {
 
      let signInError;
 
+     if (token) {
+          navigate('/')
+
+     }
 
 
      if (loading || gLoading || updating) {
@@ -42,10 +46,7 @@ const SignUp = () => {
 
 
      };
-     if (token) {
-          navigate('/')
 
-     }
      return (
           <div className='flex h-screen justify-center items-center'>
                <div className="card w-96 bg-base-100 shadow-xl">

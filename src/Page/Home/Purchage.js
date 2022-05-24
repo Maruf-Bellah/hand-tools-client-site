@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+
 import auth from '../../firebase.init';
 
 
@@ -33,6 +35,7 @@ const Purchage = () => {
                .then(res => res.json())
                .then(data => {
                     console.log(data);
+                    toast.success('Your Address Submited')
                })
 
      }
@@ -97,6 +100,7 @@ const Purchage = () => {
                          </div>
                     </div>
                </div>
+               <ToastContainer></ToastContainer>
           </div >
      );
 };

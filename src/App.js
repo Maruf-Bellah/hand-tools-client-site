@@ -1,6 +1,6 @@
 
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import { ToastContainer, toast } from 'react-toastify';
 import AddReview from './Page/Dashboard/AddReview';
 import Dashboard from './Page/Dashboard/Dashboard';
 import MyOrder from './Page/Dashboard/MyOrder';
@@ -14,6 +14,7 @@ import Login from './Page/Login/Login';
 import RequireAuth from './Page/Login/RequireAuth';
 import SignUp from './Page/Login/SignUp';
 import Navbar from './Page/Sheared/Navbar';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
       </Routes>
+
+      <ToastContainer />
     </div>
   );
 }

@@ -3,19 +3,23 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useAdmin from '../../hooks/useAdmin';
 
 const Navbar = () => {
      const [user] = useAuthState(auth);
-
+     const [admin] = useAdmin(user)
 
      const logOut = () => {
-          signOut(auth)
+          signOut(auth);
+          localStorage.removeItem('accessToken');
      }
 
      const menuItems = <>
           <li><NavLink to='/'>Home</NavLink></li>
           <li><NavLink to='/about'>About</NavLink></li>
           <li><NavLink to='/blog'>Blog</NavLink></li>
+          {/* <li><NavLink to='/dashboard'>Dashboard</NavLink></li> */}
+
           {
                user && <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
           }
