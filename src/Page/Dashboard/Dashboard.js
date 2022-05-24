@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
@@ -9,33 +9,36 @@ const Dashboard = () => {
      const [admin] = useAdmin(user)
 
      return (
-          <div class="drawer drawer-mobile">
-               <input id="dashboard-side" type="checkbox" class="drawer-toggle" />
-               <div class="drawer-content ">
+          <div className="px-12 drawer drawer-mobile">
+               <input id="dashboard-side" type="checkbox" className="drawer-toggle" />
+               <div className="drawer-content ">
                     <h1 className='text-red-500 text-center font-bold'>Well Come to Your Dashboard </h1>
                     <Outlet></Outlet>
                     {/* <!-- Page content here --> */}
 
 
                </div>
-               <div class="drawer-side">
-                    <label for="dashboard-side" class="drawer-overlay"></label>
-                    <ul class="menu  p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+               <div className="drawer-side">
+                    <label htmlFor="dashboard-side" className="drawer-overlay"></label>
+                    <ul className="menu  p-4 overflow-y-auto w-80  text-base-content">
                          {/* <!-- Sidebar content here --> */}
-                         <li className='mb-2'><NavLink to='/dashboard'>My Profile</NavLink></li>
+                         <li className='mb-2'><Link to='/dashboard'>My Profile</Link></li>
+                         <li className='mb-2'><Link to='/dashboard/addProduct'>Add Product</Link></li>
+
+
+
 
 
 
                          {!admin && <>
-
-                              <li className='mb-2'><NavLink to='/dashboard/myOrder'>My Order</NavLink></li>
-                              <li className='mb-2'><NavLink to='/dashboard/addReview'>Add a Review</NavLink></li>
+                              <li className='mb-2'><Link to='/dashboard/myOrder'>My Order</Link></li>
+                              <li className='mb-2'><Link to='/dashboard/addReview'>Add a Review</Link></li>
                          </>}
 
-
-
-
-                         {admin && <li className='mb-2'><NavLink to='/dashboard/users'>All Users</NavLink></li>}
+                         {admin && <>
+                              <li className='mb-2'><Link to='/dashboard/users'>All Users</Link></li>
+                              <li className='mb-2'><Link to='/dashboard/manageProduct'>Manage Product</Link></li>
+                         </>}
 
                     </ul>
 

@@ -9,7 +9,7 @@ const Users = () => {
      const [users, setUsers] = useState([]);
 
      useEffect(() => {
-          fetch(`http://localhost:5000/user`, {
+          fetch(`https://gentle-anchorage-39185.herokuapp.com/user`, {
                method: 'GET',
                headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -21,14 +21,14 @@ const Users = () => {
 
 
 
-     /*    const { data: users, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json())) */
+     /*    const { data: users, isLoading } = useQuery('users', () => fetch('https://gentle-anchorage-39185.herokuapp.com/user').then(res => res.json())) */
 
 
      return (
           <div>
                <h1>Hello all Users {users.length}</h1>
-               <div class="overflow-x-auto">
-                    <table class="table w-full">
+               <div className="overflow-x-auto">
+                    <table className="table w-full">
 
                          <thead>
                               <tr>

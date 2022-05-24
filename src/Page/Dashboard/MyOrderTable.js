@@ -6,8 +6,8 @@ const MyOrderTable = ({ card }) => {
           <tr>
                <th>1</th>
                <td>
-                    <div class="avatar">
-                         <div class="w-12 rounded">
+                    <div className="avatar">
+                         <div className="w-12 rounded">
                               <img src={img} alt='' />
                          </div>
                     </div>

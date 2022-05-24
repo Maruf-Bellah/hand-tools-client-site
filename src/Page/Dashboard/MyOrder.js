@@ -12,7 +12,7 @@ const MyOrder = () => {
      const navigate = useNavigate()
 
      useEffect(() => {
-          fetch(`http://localhost:5000/service?email=${user.email}`, {
+          fetch(`https://gentle-anchorage-39185.herokuapp.com/service?email=${user.email}`, {
                method: 'GET',
                headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,8 +34,8 @@ const MyOrder = () => {
      return (
           <div>
                <h1>this is my order {cards.length}</h1>
-               <div class="overflow-x-auto">
-                    <table class="table w-full">
+               <div className="overflow-x-auto">
+                    <table className="table w-full">
                          {/* <!-- head --> */}
                          <thead>
                               <tr>

@@ -5,7 +5,7 @@ const Card = () => {
      const [cards, setCards] = useState([]);
 
      useEffect(() => {
-          fetch('http://localhost:5000/service')
+          fetch('https://gentle-anchorage-39185.herokuapp.com/service')
                .then(res => res.json())
                .then(data => setCards(data))
      }, [])
