@@ -1,19 +1,20 @@
 import React from 'react';
 
-const MyOrderTable = ({ card }) => {
-     const { img, name, price } = card;
+const MyOrderTable = ({ card, index, setDeleteOrer }) => {
+     const { name, price, product, address } = card;
      return (
           <tr>
-               <th>1</th>
-               <td>
-                    <div className="avatar">
-                         <div className="w-12 rounded">
-                              <img src={img} alt='' />
-                         </div>
-                    </div>
-               </td>
+               <th>{index + 1}</th>
                <td>{name}</td>
-               <td>Price {price}</td>
+               <td>{product}</td>
+               <td>{price}</td>
+               <td>{address}</td>
+               <td>
+
+
+                    <label onClick={() => setDeleteOrer(card)} for="delete-order-modal" class="btn btn-xs btn-error">open modal</label>
+
+               </td>
           </tr>
      );
 };

@@ -3,16 +3,18 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import DeleteOrderModal from './DeleteOrderModal';
 import MyOrderTable from './MyOrderTable';
 
 const MyOrder = () => {
 
      const [cards, setCards] = useState([]);
+     const [deleteOrder, setDeleteOrer] = useState(null)
      const [user] = useAuthState(auth);
      const navigate = useNavigate()
 
      useEffect(() => {
-          fetch(`https://gentle-anchorage-39185.herokuapp.com/service?email=${user.email}`, {
+          fetch(`http://localhost:5000/address`, {
                method: 'GET',
                headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -39,21 +41,29 @@ const MyOrder = () => {
                          {/* <!-- head --> */}
                          <thead>
                               <tr>
-                                   <th></th>
-                                   <th>Photo</th>
-                                   <th>Name</th>
+                                   <th>NO</th>
+                                   <th>Customer Name</th>
+                                   <th>Product Name</th>
                                    <th>Price</th>
+                                   <th>City</th>
+                                   <th>Chose</th>
                               </tr>
                          </thead>
                          <tbody>
                               {
-                                   cards.map(card => <MyOrderTable
+                                   cards.map((card, index) => <MyOrderTable
                                         card={card}
+                                        index={index}
+                                        setDeleteOrer={setDeleteOrer}
                                    ></MyOrderTable>)
                               }
                          </tbody>
                     </table>
                </div>
+               {deleteOrder && <DeleteOrderModal
+
+                    deleteOrder={deleteOrder}
+               ></DeleteOrderModal>}
           </div>
      );
 };
