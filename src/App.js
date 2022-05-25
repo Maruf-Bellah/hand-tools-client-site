@@ -17,6 +17,7 @@ import Navbar from './Page/Sheared/Navbar';
 import 'react-toastify/dist/ReactToastify.css';
 import AddProduct from './Page/Dashboard/AddProduct';
 import ManageProduct from './Page/Dashboard/ManageProduct';
+import Payment from './Page/Dashboard/Payment';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
 
         </Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const DeleteOrderModal = ({ deleteOrder }) => {
+const DeleteOrderModal = ({ deleteOrder, setDeleteOrer }) => {
      const { name, _id } = deleteOrder;
 
      // const { name, _id } = deletingModal
@@ -20,6 +20,7 @@ const DeleteOrderModal = ({ deleteOrder }) => {
 
                     if (data.deletedCount) {
                          toast.success(`Product: is deleted.`);
+                         setDeleteOrer(null)
                          // setDeletingModal(null)
                     }
                })

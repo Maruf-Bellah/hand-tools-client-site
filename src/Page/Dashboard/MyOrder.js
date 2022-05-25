@@ -44,9 +44,9 @@ const MyOrder = () => {
                                    <th>NO</th>
                                    <th>Customer Name</th>
                                    <th>Product Name</th>
-                                   <th>Price</th>
                                    <th>City</th>
                                    <th>Chose</th>
+                                   <th>Payment</th>
                               </tr>
                          </thead>
                          <tbody>
@@ -63,6 +63,7 @@ const MyOrder = () => {
                {deleteOrder && <DeleteOrderModal
 
                     deleteOrder={deleteOrder}
+                    setDeleteOrer={setDeleteOrer}
                ></DeleteOrderModal>}
           </div>
      );

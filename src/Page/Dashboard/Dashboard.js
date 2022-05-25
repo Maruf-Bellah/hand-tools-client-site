@@ -24,6 +24,7 @@ const Dashboard = () => {
                          {/* <!-- Sidebar content here --> */}
                          <li className='mb-2'><Link to='/dashboard'>My Profile</Link></li>
                          <li className='mb-2'><Link to='/dashboard/addProduct'>Add Product</Link></li>
+                         {/* <li className='mb-2'><Link to='/dashboard/payment'>Payment Here</Link></li> */}
 
 
 
