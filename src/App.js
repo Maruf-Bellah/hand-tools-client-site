@@ -41,6 +41,7 @@ function App() {
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='purchage/:purchase' element={<Purchage></Purchage>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>

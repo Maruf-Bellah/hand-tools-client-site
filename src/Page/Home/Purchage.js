@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 import auth from '../../firebase.init';
 
 
 const Purchage = () => {
+     const { purchase } = useParams();
      const [user] = useAuthState(auth);
      const [num, setNum] = useState(5);
 
@@ -54,9 +56,9 @@ const Purchage = () => {
                <div className="hero  ">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                          <div className="card flex-shrink-0 w-full max-w-sm bg-base-100 shadow-xl">
-                              <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+                              <figure><img src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332" alt="Shoes" /></figure>
                               <div className="card-body">
-                                   <h2 className="card-title">Shoes!</h2>
+                                   <h2 className="card-title">Shoes! {purchase}</h2>
                                    <p>If a dog chews shoes whose shoes does he choose?</p>
                                    <div>
                                         <h1 className='text-5xl text-center'>{num}</h1>

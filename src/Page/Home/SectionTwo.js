@@ -2,12 +2,12 @@ import React from 'react';
 
 const SectionTwo = () => {
      return (
-          <div className='py-20'>
+          <div className=''>
                <div style={{
                     backgroundImage: `url(${'https://png.pngitem.com/pimgs/s/505-5057729_world-map-2d-hd-png-download.png'})`,
                     height: '70vh',
                     minHeight: '300px',
-                    filter: 'brightness(80%)'
+                    // filter: 'brightness(80%)'
                }} class="hero  bg-base-200">
                     <div class="hero-content w-full flex-col lg:flex-row-reverse">
 
