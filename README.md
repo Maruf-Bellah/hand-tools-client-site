@@ -1,14 +1,24 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## My Website name : HANDLE TOOLS
+## My Live site
+https://last-assainment.web.app/
+## My client site
+https://github.com/programming-hero-web-course1/manufacturer-website-client-side-Maruf-Bellah
+## My server site
+https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Maruf-Bellah
+
+
 
 In the project directory, you can run:
 
-### `npm start`
+### `What i used in the website`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
+* React Quary used
+* React hook used 
+* Toast used
+* Responsive website 
+* jwt token used 
+* and more things use in the website 
+* please go the website
 
