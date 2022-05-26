@@ -1,13 +1,16 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import Loading from '../Sheared/Loading';
-import ProductRow from './ProductRow';
+import CheckoutForm from './CheckoutForm';
+
+
+const stripePromise = loadStripe('pk_test_51L11fvB2zxg55EDckPdlIChIAZyhHP02SHmIwcITwMAAzVlpRdfmVzJgtvMyekBzmEzd39rkdlFScpxNrRDlfuvr00QSzdRdAu');
 
 const Payment = () => {
      const [payment, setPayment] = useState({})
-     const { id, name } = useParams();
-     const url = `http://localhost:5000/address/${id}`;
+     const { id } = useParams();
+     const url = `https://gentle-anchorage-39185.herokuapp.com/address/${id}`;
 
 
      useEffect(() => {
@@ -39,14 +42,14 @@ const Payment = () => {
                </div>
                <div class="card mt-5 w-3/5 bg-base-100 shadow-xl">
                     <div class="card-body">
-                         <h2 class="card-title">Card title!</h2>
-                         <p>If a dog chews shoes whose shoes does he choose?</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-primary">Buy Now</button>
-                         </div>
+                         <Elements stripe={stripePromise}>
+                              <CheckoutForm payment={payment} />
+                         </Elements>
+
                     </div>
                </div>
           </div>
+
      );
 };
 

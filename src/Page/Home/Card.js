@@ -10,8 +10,10 @@ const Card = () => {
                .then(data => setCards(data))
      }, [])
      return (
-          <div className='md:px-12 lg:px-12 px-3 py-12'>
-               <h1 className='text-3xl font-bold text-center'>Chose Your Machine {cards.length}</h1>
+          <div className='md:px-12  lg:py-20 lg:px-12 px-3 '>
+               <h1 className='text-4xl uppercase font-bold text-center'>You choose the product you need</h1>
+               <h2 className='text-2xl uppercase text-center py-3'>
+                    And add us to receive it</h2>
                <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
                     {
                          cards.map(card => <Services

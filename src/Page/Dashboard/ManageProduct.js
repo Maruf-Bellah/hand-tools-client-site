@@ -9,7 +9,7 @@ const ManageProduct = () => {
      const [deletingModal, setDeletingModal] = useState(null)
 
      useEffect(() => {
-          fetch('http://localhost:5000/product', {
+          fetch('https://gentle-anchorage-39185.herokuapp.com/product', {
                method: 'GET',
                headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

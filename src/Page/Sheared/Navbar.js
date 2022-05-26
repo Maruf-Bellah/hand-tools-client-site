@@ -38,7 +38,7 @@ const Navbar = () => {
                               {menuItems}
                          </ul>
                     </div>
-                    <Link to='/' className="btn font-bold text-yellow-700 btn-ghost normal-case text-xl">Tools Menu</Link>
+                    <Link to='/' className="btn font-bold text-yellow-500 btn-ghost normal-case text-xl">HAND TOOLS</Link>
                </div>
 
                <div className="navbar-end">

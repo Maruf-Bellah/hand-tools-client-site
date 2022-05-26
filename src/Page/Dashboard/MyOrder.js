@@ -14,7 +14,7 @@ const MyOrder = () => {
      const navigate = useNavigate()
 
      useEffect(() => {
-          fetch(`http://localhost:5000/address`, {
+          fetch(`https://gentle-anchorage-39185.herokuapp.com/address`, {
                method: 'GET',
                headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

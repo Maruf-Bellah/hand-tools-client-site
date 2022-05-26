@@ -1,31 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ReviewHome from './ReviewHome';
 
 const Slider = () => {
+     const [reviews, setReviews] = useState([]);
+
+     useEffect(() => {
+          fetch('http://localhost:5000/review')
+               .then(res => res.json())
+               .then(data => setReviews(data))
+     }, [])
      return (
-          <div className='py-12 lg:px-12'>
-               <div className="carousel rounded-box">
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=8B7BCDC2" alt="Burger" />
-                    </div>
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=500B67FB" alt="Burger" />
-                    </div>
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=A89D0DE6" alt="Burger" />
-                    </div>
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=225E6693" alt="Burger" />
-                    </div>
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=9D9539E7" alt="Burger" />
-                    </div>
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=BDC01094" alt="Burger" />
-                    </div>
-                    <div className="carousel-item">
-                         <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=7F5AE56A" alt="Burger" />
-                    </div>
+          <div className='pb-20 lg:px-12 p-3'>
+               <h1 className='text-4xl uppercase font-bold text-center'>This is your review</h1>
+               <h2 className='text-2xl uppercase py-3 text-center'>If you want you can read it again</h2>
+               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12'>
+                    {
+                         reviews.map(review => <ReviewHome
+                              review={review}
+                         ></ReviewHome>).slice(0, 6)
+                    }
                </div>
+
           </div>
      );
 };

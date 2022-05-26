@@ -50,7 +50,7 @@ const Purchage = () => {
      }
      return (
           <div>
-               <h1 className='text-4xl mt-10 text-center'>Hi <span className='text-primary'>{user?.displayName}</span> Submit Your Address</h1>
+               <h1 className='text-4xl mt-10 text-center'>Hi <span className='text-primary '>{user?.displayName}</span> Submit Your Address</h1>
                <div className="hero  ">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                          <div className="card flex-shrink-0 w-full max-w-sm bg-base-100 shadow-xl">
@@ -63,8 +63,8 @@ const Purchage = () => {
                                    </div>
 
                                    <div className="card-actions flex justify-center">
-                                        <button onClick={incNum} className="btn btn-primary">Increment</button>
-                                        <button onClick={decNum} className="btn btn-primary">Decrement</button>
+                                        <button onClick={incNum} className="btn btn-primary ">Increment</button>
+                                        <button onClick={decNum} className="btn btn-primary ">Decrement</button>
                                    </div>
                               </div>
                          </div>
@@ -131,7 +131,7 @@ const Purchage = () => {
 
 
                                         <div className="form-control mt-6">
-                                             <input type='submit' value='Submit' className="btn btn-primary"></input>
+                                             <input type='submit' value='Submit' className="btn btn-primary "></input>
                                         </div>
                                    </form>
                               </div>

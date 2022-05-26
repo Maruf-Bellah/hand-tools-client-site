@@ -7,7 +7,7 @@ const DeleteConfirmModal = ({ deletingModal, setDeletingModal }) => {
 
 
      const handleDelete = _id => {
-          fetch(`http://localhost:5000/product/${_id}`, {
+          fetch(`https://gentle-anchorage-39185.herokuapp.com/product/${_id}`, {
                method: 'DELETE',
                headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const DeleteConfirmModal = ({ deletingModal, setDeletingModal }) => {
                          <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
                          <div class="modal-action">
                               <button onClick={() => handleDelete(_id)} class="btn btn-xs btn-error">Delete</button>
-                              <label for="delete-confirm-modal" class="btn btn-xs btn-primary">Cancel</label>
+                              <label for="delete-confirm-modal" class="btn btn-xs btn-primary ">Cancel</label>
                          </div>
                     </div>
                </div>

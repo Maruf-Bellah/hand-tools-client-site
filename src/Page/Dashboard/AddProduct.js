@@ -28,7 +28,7 @@ const AddProduct = () => {
                          }
                          //     send to your database 
 
-                         fetch('http://localhost:5000/product', {
+                         fetch('https://gentle-anchorage-39185.herokuapp.com/product', {
                               method: 'POST',
                               headers: {
                                    'content-type': 'application/json'
@@ -141,7 +141,7 @@ const AddProduct = () => {
                               </div>
 
 
-                              <input className='btn btn-primary w-full max-w-xs text-white' type="submit" value="Login" />
+                              <input className='btn btn-primary  w-full max-w-xs text-white' type="submit" value="Login" />
                          </form>
 
 

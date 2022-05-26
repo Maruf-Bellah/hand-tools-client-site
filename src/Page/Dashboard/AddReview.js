@@ -8,7 +8,7 @@ const AddReview = () => {
      const onSubmit = async data => {
           const result = data;
 
-          fetch('http://localhost:5000/review', {
+          fetch('https://gentle-anchorage-39185.herokuapp.com/review', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json',
@@ -70,7 +70,7 @@ const AddReview = () => {
                                              </div>
 
 
-                                             <input className='btn btn-primary w-full max-w-xs text-white' type="submit" value="Comment" />
+                                             <input className='btn btn-primary  w-full max-w-xs text-white' type="submit" value="Comment" />
                                         </form>
                                    </div>
                                    <div>
