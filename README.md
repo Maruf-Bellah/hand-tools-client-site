@@ -9,9 +9,6 @@ https://github.com/programming-hero-web-course1/manufacturer-website-client-side
 https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Maruf-Bellah
 
 
-
-In the project directory, you can run:
-
 ### `What i used in the website`
 
 * React Quary used
