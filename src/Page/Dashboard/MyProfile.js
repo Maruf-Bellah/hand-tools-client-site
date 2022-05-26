@@ -73,7 +73,9 @@ const MyProfile = () => {
 
                })
 
+
      }
+
      return (
           <div>
                <h1>This is my profile link</h1>
