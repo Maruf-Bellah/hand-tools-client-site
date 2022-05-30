@@ -8,27 +8,27 @@ const SectionTwo = () => {
                     height: '70vh',
                     minHeight: '300px',
                     // filter: 'brightness(80%)'
-               }} class="hero  bg-base-200">
-                    <div class="hero-content w-full flex-col lg:flex-row-reverse">
+               }} className="hero  bg-base-200">
+                    <div className="hero-content w-full flex-col lg:flex-row-reverse">
 
-                         <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                              <div class="card-body">
-                                   <div class="form-control">
+                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                              <div className="card-body">
+                                   <div className="form-control">
 
-                                        <input type="text" placeholder="email" class="input input-bordered" />
+                                        <input type="text" placeholder="email" className="input input-bordered" />
                                    </div>
-                                   <div class="form-control">
+                                   <div className="form-control">
 
-                                        <input type="text" placeholder="password" class="input input-bordered" />
-
-                                   </div>
-                                   <div class="form-control">
-
-                                        <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
+                                        <input type="text" placeholder="password" className="input input-bordered" />
 
                                    </div>
-                                   <div class="form-control mt-6">
-                                        <button class="btn btn-primary">Login</button>
+                                   <div className="form-control">
+
+                                        <textarea className="textarea textarea-bordered" placeholder="Bio"></textarea>
+
+                                   </div>
+                                   <div className="form-control mt-6">
+                                        <button className="btn btn-primary font-bold">Login</button>
                                    </div>
                               </div>
                          </div>

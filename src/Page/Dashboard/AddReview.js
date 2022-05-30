@@ -35,23 +35,23 @@ const AddReview = () => {
 
      return (
           <div>
-               <h1>This is review</h1>
+
                <div className='flex  justify-center items-center'>
                     <div className="card w-full bg-base-100 shadow-xl">
                          <div className="card-body">
-                              <h2 className="text-center text-2xl font-bold">Feadback here</h2>
+                              <h2 className="text-center uppercase text-2xl font-bold">well come review page</h2>
                               <div className='grid md:grid-cols-2 justify-center items-center'>
                                    <div >
                                         <form onSubmit={handleSubmit(onSubmit)}>
 
                                              <div className="form-control w-full max-w-xs">
                                                   <label className="label">
-                                                       <span className="label-text">Comment</span>
+                                                       <span className="label-text font-bold text-xl">Comment</span>
                                                   </label>
                                                   <textarea
                                                        type="text"
                                                        placeholder="write here"
-                                                       className="input h-40 input-bordered w-full  max-w-xs"
+                                                       className="input h-44 input-bordered w-full  max-w-xs"
                                                        {...register("text", {
                                                             required: {
                                                                  value: true,
@@ -74,7 +74,7 @@ const AddReview = () => {
                                         </form>
                                    </div>
                                    <div>
-                                        <h1>img here</h1>
+                                        <img src="https://images.unsplash.com/photo-1487611459768-bd414656ea10?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470" alt="" />
                                    </div>
                               </div>
 

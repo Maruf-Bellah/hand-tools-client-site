@@ -1,4 +1,3 @@
-
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import AddReview from './Page/Dashboard/AddReview';
@@ -18,6 +17,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddProduct from './Page/Dashboard/AddProduct';
 import ManageProduct from './Page/Dashboard/ManageProduct';
 import Payment from './Page/Dashboard/Payment';
+import UpdateAddress from './Page/Dashboard/UpdateAddress';
+import ErrorPage from './Page/Home/ErrorPage';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+
         <Route path='/purchage' element={
           <RequireAuth>
             <Purchage></Purchage>
@@ -41,7 +43,8 @@ function App() {
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
-          <Route path='purchage/:purchase' element={<Purchage></Purchage>}></Route>
+          <Route path='purchage' element={<Purchage></Purchage>}></Route>
+          <Route path='updateAddress/:id' element={<UpdateAddress></UpdateAddress>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
@@ -50,6 +53,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
 
       </Routes>
 

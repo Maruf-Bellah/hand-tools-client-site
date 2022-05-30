@@ -31,14 +31,14 @@ const DeleteConfirmModal = ({ deletingModal, setDeletingModal }) => {
 
 
 
-               <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-               <div class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                         <h3 class="font-bold text-lg">Are you sure {name} deleting !</h3>
-                         <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                         <div class="modal-action">
-                              <button onClick={() => handleDelete(_id)} class="btn btn-xs btn-error">Delete</button>
-                              <label for="delete-confirm-modal" class="btn btn-xs btn-primary ">Cancel</label>
+               <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+               <div className="modal modal-bottom sm:modal-middle">
+                    <div className="modal-box">
+                         <h3 className="font-bold text-lg">Are you sure {name} deleting !</h3>
+                         <p className="py-4">Once you delete it, but you won't get it anymore!</p>
+                         <div className="modal-action">
+                              <button onClick={() => handleDelete(_id)} className="btn btn-xs btn-error">Delete</button>
+                              <label for="delete-confirm-modal" className="btn btn-xs btn-primary ">Cancel</label>
                          </div>
                     </div>
                </div>

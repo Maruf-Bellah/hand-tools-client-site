@@ -33,14 +33,14 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrer }) => {
 
 
 
-               <input type="checkbox" id="delete-order-modal" class="modal-toggle" />
-               <div class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box">
-                         <h3 class="font-bold text-lg">Hey <span className='text-primary '>{name}</span> Are you sure for deleting !</h3>
-                         <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                         <div class="modal-action">
-                              <button onClick={() => handleDelete(_id)} class="btn btn-xs btn-error">Delete</button>
-                              <label for="delete-order-modal" class="btn btn-xs btn-primary ">Cancel</label>
+               <input type="checkbox" id="delete-order-modal" className="modal-toggle" />
+               <div className="modal modal-bottom sm:modal-middle">
+                    <div className="modal-box">
+                         <h3 className="font-bold text-lg">Hey <span className='text-primary '>{name}</span> Are you sure for deleting !</h3>
+                         <p className="py-4">Once you delete it, but you won't get it anymore</p>
+                         <div className="modal-action">
+                              <button onClick={() => handleDelete(_id)} className="btn btn-xs btn-error">Delete</button>
+                              <label for="delete-order-modal" className="btn btn-xs btn-primary ">Cancel</label>
                          </div>
                     </div>
                </div>

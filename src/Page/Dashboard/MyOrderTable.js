@@ -12,12 +12,14 @@ const MyOrderTable = ({ card, index, setDeleteOrer }) => {
                <td>
 
 
-                    <label onClick={() => setDeleteOrer(card)} for="delete-order-modal" class="btn btn-xs btn-error">delete</label>
+                    <label onClick={() => setDeleteOrer(card)} for="delete-order-modal" className="btn btn-xs btn-error">delete</label>
 
                </td>
                <td>
 
                     {(price && !paid) && <Link to={`/dashboard/payment/${_id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
+
+
 
                     {(price && paid) && <span className=' text-success'>Pay</span>}
 

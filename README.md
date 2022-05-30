@@ -17,5 +17,5 @@ https://github.com/programming-hero-web-course1/manufacturer-website-server-side
 * Responsive website 
 * jwt token used 
 * and more things use in the website 
-* please go the website**
+* please go the website
 

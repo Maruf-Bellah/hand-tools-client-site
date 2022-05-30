@@ -10,7 +10,9 @@ import SmalBanner from './SmalBanner';
 
 const Home = () => {
      return (
-          <div >
+          <div style={{
+               'overflowX': 'hidden'
+          }} className=' ' >
                <Banner></Banner>
                <Business></Business>
                <Card></Card>
